@@ -8,7 +8,7 @@ import {
   createEvent,
   updateEvent,
   deleteEvent,
-} from './lib/db';
+} from './lib/db.js';
 
 const API_KEY = process.env.API_KEY || 'cal-api-key-demo-2025';
 
