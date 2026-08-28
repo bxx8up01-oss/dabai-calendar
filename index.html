@@ -1,13 +1,53 @@
-<!doctype html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>大白日程 - 四象限日历管理</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+@import "tailwindcss";
+
+@theme {
+  --color-background: hsl(210 20% 98%);
+  --color-foreground: hsl(222 20% 14%);
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(222 20% 14%);
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(222 20% 14%);
+  --color-primary: hsl(225 70% 55%);
+  --color-primary-foreground: hsl(0 0% 100%);
+  --color-secondary: hsl(220 15% 94%);
+  --color-secondary-foreground: hsl(222 20% 14%);
+  --color-muted: hsl(220 15% 94%);
+  --color-muted-foreground: hsl(220 10% 45%);
+  --color-accent: hsl(220 15% 94%);
+  --color-accent-foreground: hsl(222 20% 14%);
+  --color-destructive: hsl(0 84% 60%);
+  --color-destructive-foreground: hsl(0 0% 100%);
+  --color-border: hsl(220 13% 90%);
+  --color-input: hsl(220 13% 90%);
+  --color-ring: hsl(225 70% 55%);
+  --color-success: hsl(130 54% 42%);
+  --color-warning: hsl(26 90% 49%);
+
+  --color-quadrant-urgent-bg: hsl(0 85% 96%);
+  --color-quadrant-urgent-border: hsl(0 75% 65%);
+  --color-quadrant-urgent-text: hsl(0 70% 40%);
+  --color-quadrant-important-bg: hsl(30 90% 95%);
+  --color-quadrant-important-border: hsl(30 80% 60%);
+  --color-quadrant-important-text: hsl(25 75% 38%);
+  --color-quadrant-normal-bg: hsl(200 85% 95%);
+  --color-quadrant-normal-border: hsl(200 75% 60%);
+  --color-quadrant-normal-text: hsl(205 70% 38%);
+  --color-quadrant-low-bg: hsl(140 60% 95%);
+  --color-quadrant-low-border: hsl(140 50% 55%);
+  --color-quadrant-low-text: hsl(145 60% 32%);
+
+  --font-sans: 'Inter', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+  --radius-lg: 0.5rem;
+  --radius-md: 0.375rem;
+  --radius-sm: 0.25rem;
+
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07);
+}
+
+html, body, #root { height: 100%; margin: 0; }
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
