@@ -70,6 +70,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const url = new URL(req.url || '/', 'http://localhost');
   let path = url.pathname.replace(/^\/api/, '') || '/';
   if (path === '') path = '/';
+  const pathArr = path.split('/').filter(Boolean);
   const method = req.method || 'GET';
 
   try {
