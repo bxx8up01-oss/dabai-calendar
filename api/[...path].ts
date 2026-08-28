@@ -66,8 +66,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   setCors(res);
   if (req.method === 'OPTIONS') return res.status(200).end();
 
-  const pathArr = (req.query.path as string[]) || [];
-  const path = '/' + pathArr.join('/');
+  // 用 req.url 解析路径，更可靠
+  const url = new URL(req.url || '/', 'http://localhost');
+  let path = url.pathname.replace(/^\/api/, '') || '/';
+  if (path === '') path = '/';
   const method = req.method || 'GET';
 
   try {
