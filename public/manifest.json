@@ -1,0 +1,44 @@
+{
+  "name": "大白日程",
+  "short_name": "大白日程",
+  "description": "四象限日历管理，工作生活一目了然",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f8fafc",
+  "theme_color": "#3b82f6",
+  "lang": "zh-CN",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "utilities"],
+  "shortcuts": [
+    {
+      "name": "新建日程",
+      "short_name": "新建",
+      "description": "快速创建新的日程事项",
+      "url": "/?action=new",
+      "icons": [{ "src": "/icon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "四象限",
+      "short_name": "象限",
+      "description": "查看四象限看板",
+      "url": "/quadrant",
+      "icons": [{ "src": "/icon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "周报月报",
+      "short_name": "报告",
+      "description": "查看周报和月报",
+      "url": "/report",
+      "icons": [{ "src": "/icon.svg", "sizes": "any" }]
+    }
+  ]
+}
